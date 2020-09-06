@@ -18,29 +18,23 @@ const router = new Router({
   routes: [
     {
       path: '/',
-      component: () => import('../App'),
-      children: [
-        {
-          path: '/',
-          name: 'Landing',
-          component: () => import('../views/Landing')
-        },
-        {
-          path: '/products',
-          name: 'Products',
-          component: () => import('../views/Products')
-        },
-        {
-          path: '/products/:id',
-          name: 'Product',
-          component: () => import('../views/Product')
-        },
-        {
-          path: '/cart',
-          name: 'ShoppingCart',
-          component: () => import('../views/ShoppingCart')
-        }
-      ]
+      name: 'Landing',
+      component: () => import('../views/Landing')
+    },
+    {
+      path: '/products',
+      name: 'Products',
+      component: () => import('../views/Products')
+    },
+    {
+      path: '/products/:id',
+      name: 'Product',
+      component: () => import('../views/Product')
+    },
+    {
+      path: '/cart',
+      name: 'ShoppingCart',
+      component: () => import('../views/ShoppingCart')
     },
     {
       path: '*',
